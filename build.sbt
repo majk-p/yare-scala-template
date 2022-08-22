@@ -10,5 +10,8 @@ lazy val root = (project in file("."))
   .settings(
     name := "yare-scala-template",
     libraryDependencies ++= dependencies,
-    scalaJSUseMainModuleInitializer := true
+    scalaJSLinkerConfig ~= {
+      _.withModuleKind(ModuleKind.ESModule)
+      // _.withModuleKind(ModuleKind.CommonJSModule)
+    }
   )
