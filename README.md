@@ -14,5 +14,5 @@ Dependencies:
  - Repackage it to avoid using my domain name (`net.michalp`)
  - Implement your own strategy in `Strategy.run`
  - When done, launch `sbt` console and run `buildStrategy` task
- - The JS bundle is waiting for you in `./target/yare-bundle` - copy the contents of the file and paste it on yarre.io
+ - The JS bundle is waiting for you in `./target/yare-bundle` - copy the contents of the file and paste it on yare.io
  
