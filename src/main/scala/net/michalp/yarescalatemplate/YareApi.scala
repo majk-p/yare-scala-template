@@ -24,6 +24,10 @@ object YareApi extends js.Object {
   val star_p89: Star = js.native
   val star_nua: Star = js.native
 
+  val outpost_mdo: Outpost = js.native
+  
+  val pylon_u3p: Pylon = js.native
+
   val spirits: js.Map[String, Spirit] = js.native
   val my_spirits: js.Array[Spirit] = js.native
 

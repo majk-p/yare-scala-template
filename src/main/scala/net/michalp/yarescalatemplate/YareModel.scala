@@ -88,5 +88,35 @@ object YareModel {
     def explode(): Unit = js.native
   }
 
+  @js.native
+  trait Outpost extends js.Object {
+    // Outpost deals 2 damage (costing 1 energy, same as a spirit)
+    // when it has less then 500 energy 
+    // and 8 damage (costing 4 energy) when it has over 500 energy.
+    val id: String = js.native // "outpost_mdo"
+    val structure_type: String = js.native // "outpost"
+    val position: Coordinates = js.native
+    val energy: Double = js.native // outposts current energy
+    val energy_capacity: Double = js.native // 1000
+    val range: Double = js.native // 400 (600 if energy >= 500)
+    val control: String = js.native // player's id (e.g. "jane")
+    val sight: Sight = js.native 
+  }
+
+  @js.native
+  trait Pylon extends js.Object {
+    // Pylon heals all friendly spirits that are inside the 
+    // annulus area where the smaller circle has radius 200 
+    // and the larger one 400 units. 
+    // The healing rate is 1 energy per tick per spirit.
+    val id: String = js.native // "pylon_u3p"
+    val structure_type: String = js.native // "pylon"
+    val position: Coordinates = js.native
+    val energy: Double = js.native // pylon's current energy
+    val energy_capacity: Double = js.native // 1000
+    val control: String = js.native // player's id (e.g. "jane")
+    val sight: Sight = js.native 
+  }
+
   type Coordinates = js.Tuple2[Double, Double]
 }
