@@ -54,6 +54,8 @@ object YareModel {
     val sight: Sight = js.native
 
     def energize(target: Base): Unit = js.native
+    def energize(target: Outpost): Unit = js.native
+    def energize(target: Pylon): Unit = js.native
     def energize(target: Spirit): Unit = js.native
     def energize(target: Star): Unit = js.native
     def energize(target: Coordinates): Unit = js.native
